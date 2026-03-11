@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { pool, initDB } from './db';
-import { authMiddleware, register, login, getCurrentUser, AuthRequest } from './auth';
+import { pool, initDB } from './db.js';
+import { authMiddleware, register, login, getCurrentUser, AuthRequest } from './auth.js';
 
 dotenv.config();
 
