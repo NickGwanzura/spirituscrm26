@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "framework": null,
   "builds": [
     {
       "src": "package.json",
@@ -10,14 +9,14 @@
       }
     },
     {
-      "src": "server/dist/server.js",
+      "src": "api/index.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "server/dist/server.js"
+      "dest": "api/index.ts"
     },
     {
       "src": "/(.*)",

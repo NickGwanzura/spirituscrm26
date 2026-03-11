@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run build:server",
-    "build:server": "tsc -p server/tsconfig.json",
+    "build": "vite build && tsc -p server/tsconfig.json && tsc api/index.ts --outDir api --esModuleInterop --target ES2022 --module NodeNext --moduleResolution NodeNext",
     "preview": "vite preview",
     "server": "tsx server/server.ts",
     "server:dev": "tsx watch server/server.ts"
